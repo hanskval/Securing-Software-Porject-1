@@ -97,9 +97,9 @@ def create():
     if password1 != password2:
         flash("Antamat salasanat eivät ole samat")
         return redirect("/register")
-    if len(password1) < 8:
-        flash("Salasanan tulee olla vähintään 8 merkkiä pitkä")
-        return redirect("/register")
+    #if len(password1) < 8:
+    #    flash("Salasanan tulee olla vähintään 8 merkkiä pitkä")
+    #    return redirect("/register")
         
 
     password_hash = generate_password_hash(password1)
