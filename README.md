@@ -22,7 +22,7 @@ These instructions are for macOS/Linux operating systems.
 - Navigate to the downloaded folder --> "cd Securing-Software-Porject-1"
 - Create a Python virtual environment --> "python3 -m venv venv"
 - Activate the virtual environment --> "source venv/bin/activate"
-- Install the required Python libraries --> "pip install Flask" and "pip install python-dotenv" and "pip install pyopenssl"
+- Install the required Python libraries --> pip install Flask python-dotenv pyopenssl
 - Copy .env.example to .env and set your own SECRET_KEY value --> 
   "cp .env.example .env"
   "python3 -c 'import secrets; print(secrets.token_hex(32))'"
