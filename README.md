@@ -1,3 +1,21 @@
+# Web Application Security - OWASP Top 10
+This repostory contains code examples of five different web application security vulnerabilities based on the OWASP Top 10 standard.
+
+For each vulnerability, the repository includes:
+
+- [Insecure design](https://github.com/hanskval/Securing-Software-Porject-1/blob/main/app.py#L138
+)
+- [Cryptographic Failures](https://github.com/hanskval/Securing-Software-Porject-1/blob/main/config.py
+)
+- [Identification and Authentication Failures](https://github.com/hanskval/Securing-Software-Porject-1/blob/main/app.py#L90-L113
+)
+- [Security Misconfiguratio](https://github.com/hanskval/Securing-Software-Porject-1/blob/main/app.py#L14-L19
+)
+- [Security Logging and Monitoring Failure](https://github.com/hanskval/Securing-Software-Porject-1/blob/main/app.py#L203
+)
+
+
+
 # Testing the application
 These instructions are for macOS/Linux operating systems.
 - Clone the GitHub repository --> "git clone https://github.com/hanskval/Securing-Software-Porject-1.git"
