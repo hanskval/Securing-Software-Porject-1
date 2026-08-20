@@ -4,12 +4,18 @@ import secrets
 from flask import redirect, render_template, flash, request, session
 from werkzeug.security import generate_password_hash
 from werkzeug.security import check_password_hash
+# for flaw 4 Security Logging and Monitoring Failures
+#import logging
+
 
 import config
 import items
 
 app = Flask(__name__)
 app.secret_key = config.secret_key
+# for flaw 4 Security Logging and Monitoring Failures
+#logging.basicConfig(filename="security.log", level=logging.WARNING)
+
 
 # fixes Security Misconfiguration for missing secure cookie flags
 #app.config.update(
@@ -193,6 +199,8 @@ def login():
             session["csrf_token"] = secrets.token_hex(16)
             return redirect("/")
         else:
+            # for flaw 4 Security Logging and Monitoring Failures
+            #logging.warning(f"Failed login attempt for username: {username}")
             return render_template("login.html", error="Väärä tunnus tai salasana")
 
 def check_csrf():
