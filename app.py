@@ -11,6 +11,13 @@ import items
 app = Flask(__name__)
 app.secret_key = config.secret_key
 
+# fixes Security Misconfiguration for missing secure cookie flags
+#app.config.update(
+#    SESSION_COOKIE_SECURE=True,
+#    SESSION_COOKIE_HTTPONLY=True,
+#    SESSION_COOKIE_SAMESITE="Lax",
+#)
+
 @app.route("/")
 def index():
     all_items = items.get_items()
