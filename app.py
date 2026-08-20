@@ -17,7 +17,7 @@ app.secret_key = config.secret_key
 #logging.basicConfig(filename="security.log", level=logging.WARNING)
 
 
-# fixes Security Misconfiguration for missing secure cookie flags
+# fixes for flaw 3 Security Misconfiguration for missing secure cookie flags
 #app.config.update(
 #    SESSION_COOKIE_SECURE=True,
 #    SESSION_COOKIE_HTTPONLY=True,
@@ -110,7 +110,7 @@ def create():
     if password1 != password2:
         flash("Antamat salasanat eivät ole samat")
         return redirect("/register")
-    # fixed part
+    # fixed part for flaw 2 Identification and Authentication Failures
     #if len(password1) < 8:
     #    flash("Salasanan tulee olla vähintään 8 merkkiä pitkä")
     #    return redirect("/register")
@@ -134,7 +134,7 @@ def create_experience():
     if not session.get("username"):
         return redirect("/login")
     
-    # fix for Insecure Design 
+    # fix for flaw 5 Insecure Design 
     #if len(title) > 25 or len(description) > 5000:
     #    return render_template("experiences.html", error="Otsikon tulee olla enintään 25 merkkiä ja kuvauksen enintään 5000 merkkiä pitkä.")
 
