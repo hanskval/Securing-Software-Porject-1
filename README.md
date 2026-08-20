@@ -14,7 +14,7 @@ For each vulnerability, the repository includes:
 - [Security Logging and Monitoring Failure](https://github.com/hanskval/Securing-Software-Porject-1/blob/main/app.py#L203
 )
 
-
+All security fixes are commented out in code
 
 # Testing the application
 These instructions are for macOS/Linux operating systems.
