@@ -133,9 +133,10 @@ def create_experience():
     rating = request.form["rating"]
     if not session.get("username"):
         return redirect("/login")
-
-    if len(title) > 25 or len(description) > 5000:
-        return render_template("experiences.html", error="Otsikon tulee olla enintään 25 merkkiä ja kuvauksen enintään 5000 merkkiä pitkä.")
+    
+    # fix for Insecure Design 
+    #if len(title) > 25 or len(description) > 5000:
+    #    return render_template("experiences.html", error="Otsikon tulee olla enintään 25 merkkiä ja kuvauksen enintään 5000 merkkiä pitkä.")
 
     username = session["username"]
     user_id = items.get_user_id(username)
