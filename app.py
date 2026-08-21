@@ -134,9 +134,8 @@ def create_experience():
     if not session.get("username"):
         return redirect("/login")
     
-    # fix for flaw 5 Insecure Design 
-    #if len(title) > 25 or len(description) > 5000:
-    #    return render_template("experiences.html", error="Otsikon tulee olla enintään 25 merkkiä ja kuvauksen enintään 5000 merkkiä pitkä.")
+    if len(title) > 25 or len(description) > 5000:
+        return render_template("experiences.html", error="Otsikon tulee olla enintään 25 merkkiä ja kuvauksen enintään 5000 merkkiä pitkä.")
 
     username = session["username"]
     user_id = items.get_user_id(username)

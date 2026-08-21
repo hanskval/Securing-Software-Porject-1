@@ -3,7 +3,7 @@ This repostory contains code examples of five different web application security
 
 For each vulnerability, the repository includes:
 
-- [Insecure design](https://github.com/hanskval/Securing-Software-Porject-1/blob/main/app.py#L138
+- [Vulnerable and Outdated Components](https://github.com/hanskval/Securing-Software-Porject-1/blob/main/requirements.txt
 )
 - [Cryptographic Failures](https://github.com/hanskval/Securing-Software-Porject-1/blob/main/config.py
 )
@@ -22,7 +22,7 @@ These instructions are for macOS/Linux operating systems.
 - Navigate to the downloaded folder --> "cd Securing-Software-Porject-1"
 - Create a Python virtual environment --> "python3 -m venv venv"
 - Activate the virtual environment --> "source venv/bin/activate"
-- Install the required Python libraries --> pip install Flask python-dotenv pyopenssl
+- Install the required Python libraries --> pip install requirements.txt
 - Copy .env.example to .env and set your own SECRET_KEY value --> 
   "cp .env.example .env"
   "python3 -c 'import secrets; print(secrets.token_hex(32))'"
